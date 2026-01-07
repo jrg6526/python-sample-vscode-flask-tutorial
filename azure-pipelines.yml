@@ -8,6 +8,9 @@ stages:
 - stage: Build
   displayName: 'Build Stage'
   jobs:
+  - job: ParrallelTesting
+    strategy:
+      parallel: 2
   - job: BuildJob
     displayName: 'Build Job'
     steps:
